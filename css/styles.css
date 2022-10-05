@@ -7,6 +7,14 @@
 /* bgc super white #fff */
 /* hero bgc background: #2F303A; */
 
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    
+}
 :root {
     --hero-bcg: #2F303A;
     --accent-color: #2196F3;
@@ -20,6 +28,25 @@
     --bcg-btn: #F5F4FA;
 
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: o;
+}
+
+ul, ol {
+    margin: 0;
+    padding-left: 0;
+}
+button {
+    cursor: pointer;
+}
+
 
 body {
     background-color: var(--main-bcg);
@@ -36,13 +63,14 @@ body {
 }
 
 
+
 .logo {
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1..19;
     letter-spacing: 0.03em;
-    color:#212121;
+    color: var(--secondary-text);
 
 }
 
