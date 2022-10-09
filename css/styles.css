@@ -175,15 +175,6 @@ body {
 
 /* hero */
 
-/* .hero-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    
-
-} */
-
 
 .hero {
     background-color: var(--hero-bcg);
@@ -211,7 +202,6 @@ body {
 /* hero button */
 
 .btn-hero {
-    align-self: flex-end;
     display: block;
     align-items: center;
     text-align: center;
@@ -241,36 +231,8 @@ body {
 }
 
 /* portfolio button */
-.btn {
-    font-family:inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.88;
-    border-radius: 4px;
-    border: none;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: var(--secondary-text);
-    background-color: var(--bcg-btn);
-}
 
-.btn.primary{
-    color: var(--secondary-text);
-    background-color: var(--bcg-btn);
-}
 
-.btn.secondary {
-    color: var(--secondary-text);
-    background-color: var(--accent-color);
-}
-
-.btn:hover, .btn:focus{
-    color: var(--white-text);
-    background-color: var(--accent-color);
-    transition: 0.7s;
-}
 
 /* section-advantages */
 
@@ -289,7 +251,7 @@ body {
 
 .container-advantages-list {
     display: flex;
-
+    
 }
 
 .advantages-title {
@@ -305,8 +267,6 @@ body {
 .container-advantages-list .item+.item {
 margin-left: 30px;
 }
-
-
 
 .section-advantages .text{
     font-size: 14px;
@@ -346,6 +306,7 @@ margin-bottom: 50px;
 .team .title {
     margin-bottom: 50px;
 }
+
 .team-list {
     display: flex;
     justify-content: center;
@@ -356,9 +317,7 @@ margin-bottom: 50px;
     background-color: var(--main-bcg);
 
 }
-.team .image {
-    margin-bottom: 30px;
-}
+
 .team-name{
     font-weight: 500;
     font-size: 16px;
@@ -370,30 +329,121 @@ margin-bottom: 50px;
     
 }
 
-
 .team-position {
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
     font-size: 16px;
+}
+
+.team-name-position {
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
+/* filter */
+
+.projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+
+}
+
+/* .filter:not(:first-child) {
+    margin-left: 8px;
+} */
+
+
+.btn {
+    display: block;
+    align-items: center;
+    text-align: center;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.88;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    padding: 6px 22px;
+
+    letter-spacing: 0.06em;
+    color: var(--secondary-text);
+    background-color: var(--bcg-btn);
+}
+
+.
+
+.btn.primary {
+    color: var(--secondary-text);
+    background-color: var(--bcg-btn);
+}
+
+.btn.secondary {
+    color: var(--secondary-text);
+    background-color: var(--accent-color);
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--white-text);
+    background-color: var(--accent-color);
+    transition: 0.7s;
+}
+
+/* projects */
+.projects-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+
+.porjects-image-list {
+    width: calc((100% - 60px) / 3);
+    border: 1px solid #EEEEEE;
+}
+
+/* .project-portfolio-image {
+ margin-bottom: 20px;
+} */
+
+.image-item-portfolio {
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 20px;
+    padding-right: 24px;
+}
 .project-name {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--bcg-white);
     font-weight: 700;
+
+    margin-bottom: 4px;
+
 }
 
 .project-text {
     line-height: 1.88;
     letter-spacing: 0.03em;
     font-size: 16px;
+
+
+
+    
 }
 
-/* footer */
+/* -------footer------- */
 
 .footer-main {
     background-color: var(--hero-bcg);
