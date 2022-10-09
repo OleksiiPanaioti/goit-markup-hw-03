@@ -7,14 +7,6 @@
 /* bgc super white #fff */
 /* hero bgc background: #2F303A; */
 
-
-*{
-    box-sizing: border-box;
-}
-
-html {
-    
-}
 :root {
     --hero-bcg: #2F303A;
     --accent-color: #2196F3;
@@ -29,6 +21,8 @@ html {
 
 }
 
+/* ------reset------- */
+
 p,
 h1,
 h2,
@@ -36,22 +30,27 @@ h3,
 h4,
 h5,
 h6 {
-    margin: o;
+    margin: 0;
 }
 
-ul, ol {
+ul,
+ol {
     margin: 0;
     padding-left: 0;
 }
+
 button {
     cursor: pointer;
 }
 
+address {
+    font-style: normal;
+}
 
-body {
-    background-color: var(--main-bcg);
-    color: var(--main-text);
-    font-family: 'Roboto', sans-serif;
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .link {
@@ -59,28 +58,80 @@ body {
 }
 
 .list{
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
+body {
+    background-color: var(--main-bcg);
+    color: var(--main-text);
+    font-family: 'Roboto', sans-serif;
+}
 
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 2px solid tomato;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+.header-main {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
+    
+
+}
+
+.nav-main {
+    display: flex;
+}
 
 .logo {
+
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
-    line-height: 1..19;
+    line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--secondary-text);
 
 }
 
-.logo>span {
+.logo > span {
     color: var(--accent-color);
 }
 
 /* site nav */
 
+.site-nav {
+    display: flex;
+    margin-left: 93px;
+
+}
+
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+
 .site-nav .link{
+    display: block;
+    padding: 32px 0;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -97,12 +148,23 @@ body {
 .site-nav .link.current{
     color: var(--accent-color);
 }
+
+.contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+
+.contacts .item+.item {
+    margin-left: 50px;
+}
+
 .contacts .contacts-link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color:#757575;
+    color:var(--main-text);
 }
 
 .contacts .contacts-link:hover,
@@ -112,8 +174,21 @@ body {
 }
 
 /* hero */
+
+/* .hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    
+
+} */
+
+
 .hero {
     background-color: var(--hero-bcg);
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .hero-title {
@@ -125,33 +200,38 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white-text);
+
+    width: 670px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 /* hero button */
 
 .btn-hero {
+    align-self: flex-end;
+    display: block;
+    align-items: center;
+    text-align: center;
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     border: none;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+
+    min-width: 216px;
+    padding: 10px 32px;
+    margin: 0 auto;
+   
     letter-spacing: 0.06em;
     color: var(--white-text);
     background-color: var(--accent-color);
 }
 
-/* .btn-hero.primary{
-    color: var(--white-text);
-    background-color: var(--accent-color);
-}
-.btn-hero.secondary{
-    color: var(--secondary-text);
-    background-color: var(--grey-bcg);
-} */
 
 .btn-hero:hover,
 .btn-hero:focus {
@@ -192,6 +272,8 @@ body {
     transition: 0.7s;
 }
 
+/* section-advantages */
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -205,18 +287,30 @@ body {
     margin: -1px;
 }
 
-.section-advantages .title {
+.container-advantages-list {
+    display: flex;
+
+}
+
+.advantages-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--secondary-text);
+    margin-bottom: 10px;
 }
+
+.container-advantages-list .item+.item {
+margin-left: 30px;
+}
+
+
 
 .section-advantages .text{
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
@@ -225,6 +319,19 @@ background-color: var(--grey-bcg);
 }
 
 
+/* portfolio */
+.portfolio {
+    padding-top: 0;
+}
+.container-portfolio .title {
+margin-bottom: 50px;
+
+}
+
+.container-portfolio-list {
+    display: flex;
+    gap: 30px;
+}
 .portfolio .title,
 .team .title{
     font-weight: 700;
@@ -235,6 +342,23 @@ background-color: var(--grey-bcg);
     color: var(--secondary-text);
 }
 
+/* team */
+.team .title {
+    margin-bottom: 50px;
+}
+.team-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.team .item {
+    background-color: var(--main-bcg);
+
+}
+.team .image {
+    margin-bottom: 30px;
+}
 .team-name{
     font-weight: 500;
     font-size: 16px;
@@ -242,6 +366,7 @@ background-color: var(--grey-bcg);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--secondary-text);
+    margin-bottom: 10px;
     
 }
 
@@ -251,6 +376,7 @@ background-color: var(--grey-bcg);
     text-align: center;
     letter-spacing: 0.03em;
     font-size: 16px;
+    padding-bottom: 30px;
 }
 
 .project-name {
@@ -269,17 +395,15 @@ background-color: var(--grey-bcg);
 
 /* footer */
 
-.footer-bcg {
-    background-color: #2F303A;
+.footer-main {
+    background-color: var(--hero-bcg);
 }
-.address-google {
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--white-text);
+
+.container-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
+
 
 .footer-logo {
     font-family: 'Raleway';
@@ -288,11 +412,32 @@ background-color: var(--grey-bcg);
     line-height: 1.19;
     letter-spacing: 0.03em;
     color:var(--white-text);
+
 }
 
 .footer-logo > span {
     color: var(--accent-color);
 }
+
+.address {
+    margin-top: 20px;
+
+}
+
+.address .item:not(:last-child) {
+    margin-bottom: 9px;
+}
+.address-google {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--white-text);
+
+
+}
+
 .address-google:hover,
 .address-google:focus {
     color:var(--accent-color);
@@ -310,6 +455,4 @@ background-color: var(--grey-bcg);
     color:var(--accent-color)
 }
 
-.address {
-    font-style: normal;
-}
+
